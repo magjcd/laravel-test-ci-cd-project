@@ -27,7 +27,10 @@ jobs:
         node-version: '20'
 
     - name: Install NPM Dependencies
-      uses: npm run build
+      run: npm install
+
+    - name: Build NPM Assets
+      run: npm run build
 
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
@@ -35,6 +38,7 @@ jobs:
         server: ${{ secrets.SERVER }}
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
+        folder: public_html/testlaravelappftp.talrejaconsultant.com
         script: |
-          cd /home/ojrl1fmg7hb2/public_html/testlaravelapp.talrejaconsultant.com
           php artisan migrate --force
+          php artisan optimize
