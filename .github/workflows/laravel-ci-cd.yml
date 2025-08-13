@@ -38,7 +38,7 @@ jobs:
         server: ${{ secrets.SERVER }}
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
+        folder: public_html/testlaravelapp.talrejaconsultant.com
         script: |
-          cd /home/ojrl1fmg7hb2/public_html/testlaravelapp.talrejaconsultant.com
           php artisan migrate --force
           php artisan optimize
