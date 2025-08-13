@@ -39,10 +39,11 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         # folder: public_html/testlaravelappftp.talrejaconsultant.com
-    
+        server_dir: public_html/testlaravelappftp.talrejaconsultant.com
+
     - name: Generate App Key
       run: php artisan key:Generate
-    
+
     - name: Run Migrations
       run: php artisan migrate --force
     - name: Run Optimization
