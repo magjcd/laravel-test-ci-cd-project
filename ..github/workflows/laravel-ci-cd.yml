@@ -1,0 +1,7 @@
+name: Laravel CI/CD Deployment
+
+on:
+  - push:
+    - branches:
+        - main
+
