@@ -32,8 +32,8 @@ jobs:
     - name: Build NPM Assets
       run: npm run build
 
-    - name: Generate App Key
-      run: php artisan key:Generate
+    # - name: Generate App Key
+    #  run: php artisan key:Generate
 
     - name: Run Migrations
       run: php artisan migrate --force
