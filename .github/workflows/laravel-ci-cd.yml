@@ -41,8 +41,8 @@ jobs:
     - name: CComposer Dump
       run: composer dump-autoload
       
-    - name: Generate App Key
-      run: php artisan key:Generate
+    #- name: Generate App Key
+     # run: php artisan key:Generate
 
     - name: Run Migrations
       run: php artisan migrate --force
