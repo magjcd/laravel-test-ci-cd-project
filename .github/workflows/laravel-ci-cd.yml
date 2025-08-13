@@ -32,6 +32,15 @@ jobs:
     - name: Build NPM Assets
       run: npm run build
 
+    - name: Config Cache
+      run: php artisan config:cache
+
+    - name: Clear Config Cache
+      run: php artisan config:clear
+
+    - name: CComposer Dump
+      run: composer dump-autoload
+      
     - name: Generate App Key
       run: php artisan key:Generate
 
